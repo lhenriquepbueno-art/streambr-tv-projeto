@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder para logo de canal sem imagem -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="60dp"
+    android:height="60dp"
+    android:viewportWidth="60"
+    android:viewportHeight="60">
+    <!-- Fundo arredondado -->
+    <path android:fillColor="#1A2233"
+        android:pathData="M8,0 L52,0 A8,8 0 0,1 60,8 L60,52 A8,8 0 0,1 52,60 L8,60 A8,8 0 0,1 0,52 L0,8 A8,8 0 0,1 8,0 Z"/>
+    <!-- Ícone TV estilizado -->
+    <path android:fillColor="#3D4D66"
+        android:pathData="M14,16 L46,16 A4,4 0 0,1 50,20 L50,40 A4,4 0 0,1 46,44 L14,44 A4,4 0 0,1 10,40 L10,20 A4,4 0 0,1 14,16 Z"/>
+    <path android:fillColor="#2A3548"
+        android:pathData="M24,44 L36,44 L38,50 L22,50 Z"/>
+    <path android:fillColor="#E5162A"
+        android:pathData="M26,27 L26,35 L34,31 Z"/>
+</vector>

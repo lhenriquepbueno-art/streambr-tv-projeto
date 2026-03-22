@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Permissões necessárias -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--
+        CRÍTICO para Android TV / Fire TV:
+        Declara que o app é para TV (sem touchscreen).
+        Sem isso, o app não aparece na loja do Fire TV nem na launcher de TV.
+    -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <!-- Fire TV: indica suporte ao controle remoto Amazon -->
+    <uses-feature
+        android:name="amazon.hardware.fire_tv"
+        android:required="false" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@drawable/ic_launcher"
+        android:label="StreamBR"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.StreamBR"
+        android:networkSecurityConfig="@xml/network_security_config">
+
+        <!-- ── SplashActivity ─────────────────────────────────────────── -->
+        <activity
+            android:name=".ui.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="landscape"
+            android:noHistory="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- LEANBACK_LAUNCHER: aparece na launcher do Android TV -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!-- LAUNCHER: aparece no Firestick sideload -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".ui.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- ── HomeActivity (tela principal com BrowseFragment) ───────── -->
+        <activity
+            android:name=".ui.home.HomeActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:launchMode="singleTop" />
+
+        <!-- ── PlayerActivity ─────────────────────────────────────────── -->
+        <!--
+            configChanges: player não reinicia ao girar tela ou mudar config.
+            turnScreenOn + showWhenLocked: toca vídeo com tela "bloqueada" (TV).
+        -->
+        <activity
+            android:name=".ui.player.PlayerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:turnScreenOn="true"
+            android:showWhenLocked="true"
+            android:theme="@style/Theme.StreamBR.Player" />
+
+        <!-- ── PinActivity (área adulta) ─────────────────────────────── -->
+        <activity
+            android:name=".ui.PinActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+    </application>
+
+</manifest>

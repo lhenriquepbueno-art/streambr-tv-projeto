@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PinActivity — desbloqueio de conteúdo adulto
+
+    Design: dialog centralizado sobre fundo escuro semi-transparente
+    (não é uma activity separada visualmente, parece um modal).
+
+    PIN de 4 dígitos com teclado numérico GRANDE para TV
+    (botões mínimo 72dp para fácil seleção com D-pad).
+
+    Ordem de foco:
+      1  2  3
+      4  5  6
+      7  8  9
+         0
+      [CONFIRMAR]
+
+    nextFocusRight/Left/Up/Down conectam todos os botões em grade.
+-->
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#CC000000">
+
+    <!-- Card central do PIN -->
+    <androidx.cardview.widget.CardView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="420dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:cardCornerRadius="16dp"
+        app:cardBackgroundColor="@color/background_surface"
+        app:cardElevation="24dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="40dp">
+
+            <!-- Ícone de cadeado -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="🔒"
+                android:textSize="36sp"
+                android:layout_marginBottom="14dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Conteúdo +18"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Digite seu PIN de 4 dígitos"
+                android:textSize="14sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginTop="6dp"
+                android:layout_marginBottom="28dp"/>
+
+            <!-- Indicadores de dígitos (4 bolinhas) -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_marginBottom="32dp">
+
+                <View android:id="@+id/pin_dot_1" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:background="@drawable/shape_pin_dot_empty"/>
+                <View android:id="@+id/pin_dot_2" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:background="@drawable/shape_pin_dot_empty"/>
+                <View android:id="@+id/pin_dot_3" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:background="@drawable/shape_pin_dot_empty"/>
+                <View android:id="@+id/pin_dot_4" android:layout_width="18dp" android:layout_height="18dp" android:layout_marginStart="8dp" android:layout_marginEnd="8dp" android:background="@drawable/shape_pin_dot_empty"/>
+
+            </LinearLayout>
+
+            <!-- Teclado numérico 3x4 -->
+            <!-- Linha 1: 1 2 3 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <Button android:id="@+id/btn_1" style="@style/PinButton" android:text="1" android:nextFocusRight="@+id/btn_2" android:nextFocusDown="@+id/btn_4"/>
+                <Button android:id="@+id/btn_2" style="@style/PinButton" android:text="2" android:nextFocusLeft="@id/btn_1" android:nextFocusRight="@+id/btn_3" android:nextFocusDown="@+id/btn_5"/>
+                <Button android:id="@+id/btn_3" style="@style/PinButton" android:text="3" android:nextFocusLeft="@id/btn_2" android:nextFocusDown="@+id/btn_6"/>
+            </LinearLayout>
+
+            <!-- Linha 2: 4 5 6 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <Button android:id="@+id/btn_4" style="@style/PinButton" android:text="4" android:nextFocusUp="@id/btn_1" android:nextFocusRight="@+id/btn_5" android:nextFocusDown="@+id/btn_7"/>
+                <Button android:id="@+id/btn_5" style="@style/PinButton" android:text="5" android:nextFocusUp="@id/btn_2" android:nextFocusLeft="@id/btn_4" android:nextFocusRight="@+id/btn_6" android:nextFocusDown="@+id/btn_8"/>
+                <Button android:id="@+id/btn_6" style="@style/PinButton" android:text="6" android:nextFocusUp="@id/btn_3" android:nextFocusLeft="@id/btn_5" android:nextFocusDown="@+id/btn_9"/>
+            </LinearLayout>
+
+            <!-- Linha 3: 7 8 9 -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="8dp">
+                <Button android:id="@+id/btn_7" style="@style/PinButton" android:text="7" android:nextFocusUp="@id/btn_4" android:nextFocusRight="@+id/btn_8" android:nextFocusDown="@+id/btn_0"/>
+                <Button android:id="@+id/btn_8" style="@style/PinButton" android:text="8" android:nextFocusUp="@id/btn_5" android:nextFocusLeft="@id/btn_7" android:nextFocusRight="@+id/btn_9" android:nextFocusDown="@+id/btn_0"/>
+                <Button android:id="@+id/btn_9" style="@style/PinButton" android:text="9" android:nextFocusUp="@id/btn_6" android:nextFocusLeft="@id/btn_8" android:nextFocusDown="@+id/btn_0"/>
+            </LinearLayout>
+
+            <!-- Linha 4: ← 0 → (centralizado) -->
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:orientation="horizontal" android:layout_marginBottom="24dp">
+                <Button android:id="@+id/btn_delete" style="@style/PinButtonSecondary" android:text="⌫" android:nextFocusUp="@id/btn_7" android:nextFocusRight="@+id/btn_0" android:nextFocusDown="@+id/btn_confirm"/>
+                <Button android:id="@+id/btn_0" style="@style/PinButton" android:text="0" android:nextFocusUp="@id/btn_8" android:nextFocusLeft="@id/btn_delete" android:nextFocusRight="@+id/btn_clear" android:nextFocusDown="@+id/btn_confirm"/>
+                <Button android:id="@+id/btn_clear" style="@style/PinButtonSecondary" android:text="C" android:nextFocusUp="@id/btn_9" android:nextFocusLeft="@id/btn_0" android:nextFocusDown="@+id/btn_confirm"/>
+            </LinearLayout>
+
+            <!-- Botão confirmar -->
+            <Button
+                android:id="@+id/btn_confirm"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="CONFIRMAR"
+                android:textSize="15sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:letterSpacing="0.1"
+                android:background="@drawable/bg_button_primary"
+                android:nextFocusUp="@id/btn_0"
+                android:focusable="true"/>
+
+            <!-- Erro PIN incorreto -->
+            <TextView
+                android:id="@+id/tv_pin_error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="PIN incorreto. Tente novamente."
+                android:textSize="13sp"
+                android:textColor="@color/error_red"
+                android:gravity="center"
+                android:layout_marginTop="12dp"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+</FrameLayout>

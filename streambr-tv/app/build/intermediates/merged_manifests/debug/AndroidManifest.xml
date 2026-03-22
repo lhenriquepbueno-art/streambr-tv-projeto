@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.streambr.tv.debug"
+    android:versionCode="1"
+    android:versionName="1.0.0" >
+
+    <uses-sdk
+        android:minSdkVersion="21"
+        android:targetSdkVersion="34" />
+
+    <!-- Permissões necessárias -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+
+    <!--
+        CRÍTICO para Android TV / Fire TV:
+        Declara que o app é para TV (sem touchscreen).
+        Sem isso, o app não aparece na loja do Fire TV nem na launcher de TV.
+    -->
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+
+    <!-- Fire TV: indica suporte ao controle remoto Amazon -->
+    <uses-feature
+        android:name="amazon.hardware.fire_tv"
+        android:required="false" />
+
+    <permission
+        android:name="com.streambr.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+        android:protectionLevel="signature" />
+
+    <uses-permission android:name="com.streambr.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+
+    <application
+        android:allowBackup="false"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:debuggable="true"
+        android:extractNativeLibs="true"
+        android:icon="@drawable/ic_launcher"
+        android:label="StreamBR"
+        android:networkSecurityConfig="@xml/network_security_config"
+        android:roundIcon="@drawable/ic_launcher"
+        android:supportsRtl="true"
+        android:testOnly="true"
+        android:theme="@style/Theme.StreamBR" >
+
+        <!-- ── SplashActivity ─────────────────────────────────────────── -->
+        <activity
+            android:name="com.streambr.tv.ui.SplashActivity"
+            android:exported="true"
+            android:noHistory="true"
+            android:screenOrientation="landscape" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <!-- LEANBACK_LAUNCHER: aparece na launcher do Android TV -->
+                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+                <!-- LAUNCHER: aparece no Firestick sideload -->
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.streambr.tv.ui.login.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:windowSoftInputMode="adjustPan" />
+
+        <!-- ── HomeActivity (tela principal com BrowseFragment) ───────── -->
+        <activity
+            android:name="com.streambr.tv.ui.home.HomeActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="landscape" />
+
+        <!-- ── PlayerActivity ─────────────────────────────────────────── -->
+        <!--
+            configChanges: player não reinicia ao girar tela ou mudar config.
+            turnScreenOn + showWhenLocked: toca vídeo com tela "bloqueada" (TV).
+        -->
+        <activity
+            android:name="com.streambr.tv.ui.player.PlayerActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+            android:exported="false"
+            android:screenOrientation="landscape"
+            android:showWhenLocked="true"
+            android:theme="@style/Theme.StreamBR.Player"
+            android:turnScreenOn="true" />
+
+        <!-- ── PinActivity (área adulta) ─────────────────────────────── -->
+        <activity
+            android:name="com.streambr.tv.ui.PinActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+
+        <service
+            android:name="androidx.room.MultiInstanceInvalidationService"
+            android:directBootAware="true"
+            android:exported="false" />
+
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:authorities="com.streambr.tv.debug.androidx-startup"
+            android:exported="false" >
+            <meta-data
+                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+                android:value="androidx.startup" />
+        </provider>
+
+        <uses-library
+            android:name="androidx.window.extensions"
+            android:required="false" />
+        <uses-library
+            android:name="androidx.window.sidecar"
+            android:required="false" />
+
+        <receiver
+            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+            android:directBootAware="false"
+            android:enabled="true"
+            android:exported="true"
+            android:permission="android.permission.DUMP" >
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+            </intent-filter>
+        </receiver>
+    </application>
+
+</manifest>

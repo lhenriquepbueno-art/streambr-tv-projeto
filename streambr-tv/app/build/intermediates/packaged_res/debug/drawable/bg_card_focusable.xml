@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Seletor de foco para cards do Leanback.
+
+    Quando o D-pad foca no card:
+      - Borda vermelha aparece (stroke 2dp @color/focus_border)
+      - Fundo fica levemente mais claro
+      - A escala (1.08x) é feita via animação no Presenter, não aqui
+
+    Estado focused = card selecionado pelo controle remoto
+    Estado default = card não selecionado
+-->
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- Estado: focado (D-pad sobre este card) -->
+    <item android:state_focused="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"/>
+            <stroke android:width="2.5dp" android:color="@color/focus_border"/>
+            <solid android:color="#1AE5162A"/>
+        </shape>
+    </item>
+
+    <!-- Estado: pressionado -->
+    <item android:state_pressed="true">
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"/>
+            <stroke android:width="2.5dp" android:color="@color/accent_red_dark"/>
+            <solid android:color="#33E5162A"/>
+        </shape>
+    </item>
+
+    <!-- Estado: padrão (sem foco) -->
+    <item>
+        <shape android:shape="rectangle">
+            <corners android:radius="10dp"/>
+            <stroke android:width="1dp" android:color="#1AFFFFFF"/>
+            <solid android:color="@color/transparent"/>
+        </shape>
+    </item>
+
+</selector>

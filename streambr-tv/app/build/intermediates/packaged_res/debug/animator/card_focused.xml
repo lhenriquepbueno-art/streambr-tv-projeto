@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Animador de escala para o efeito de foco em TV.
+
+    Quando um card recebe foco pelo D-pad, escala de 1.0x para 1.07x.
+    Quando perde o foco, volta para 1.0x.
+
+    Este arquivo é referenciado no Presenter via:
+      holder.view.animate().scaleX(1.07f).scaleY(1.07f).setDuration(150).start()
+    ou usando ObjectAnimator:
+      ObjectAnimator.ofFloat(view, "scaleX", 1.0f, 1.07f)
+
+    Em Leanback, o efeito de foco padrão já inclui uma sombra elevada.
+    Aqui adicionamos a escala explícita para o padrão Netflix/Globoplay.
+-->
+<set xmlns:android="http://schemas.android.com/apk/res/android">
+    <objectAnimator
+        android:propertyName="scaleX"
+        android:valueTo="1.07"
+        android:valueType="floatType"
+        android:duration="150"
+        android:interpolator="@android:interpolator/fast_out_slow_in"/>
+    <objectAnimator
+        android:propertyName="scaleY"
+        android:valueTo="1.07"
+        android:valueType="floatType"
+        android:duration="150"
+        android:interpolator="@android:interpolator/fast_out_slow_in"/>
+</set>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    PlayerActivity — player de vídeo full-screen
+
+    Camadas (de baixo para cima):
+      1. PlayerView          — vídeo em si (ExoPlayer)
+      2. overlay_buffering   — spinner centralizado durante buffering
+      3. overlay_info        — topo: título + hora + badge LIVE/VOD
+      4. overlay_controls    — bottom: barra de progresso + botões (só VOD)
+      5. overlay_error       — centro: mensagem de erro + botão tentar novamente
+
+    Todos os overlays começam gone/invisible — o código os exibe conforme necessário.
+    O PlayerView gerencia seu próprio controller (showController/hideController).
+-->
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/black">
+
+    <!-- ── 1. Vídeo ──────────────────────────────────────────────────── -->
+    <androidx.media3.ui.PlayerView
+        android:id="@+id/player_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:use_controller="false"
+        app:surface_type="surface_view"
+        app:resize_mode="fit"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ── 2. Buffering spinner ──────────────────────────────────────── -->
+    <ProgressBar
+        android:id="@+id/progress_buffering"
+        android:layout_width="64dp"
+        android:layout_height="64dp"
+        android:indeterminateTint="@color/accent_red"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
+    <!-- ── 3. Overlay superior: título + badge + hora ────────────────── -->
+    <LinearLayout
+        android:id="@+id/overlay_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingTop="28dp"
+        android:paddingBottom="28dp"
+        android:background="@drawable/gradient_top_overlay"
+        android:visibility="invisible"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Badge LIVE (vermelho pulsante) -->
+        <LinearLayout
+            android:id="@+id/badge_live"
+            android:layout_width="wrap_content"
+            android:layout_height="28dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:background="@drawable/bg_badge_live"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:layout_marginEnd="16dp"
+            android:visibility="gone">
+
+            <View
+                android:id="@+id/dot_live"
+                android:layout_width="7dp"
+                android:layout_height="7dp"
+                android:background="@drawable/shape_live_dot"
+                android:layout_marginEnd="6dp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="AO VIVO"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:letterSpacing="0.1"/>
+        </LinearLayout>
+
+        <!-- Nome do canal / título do filme -->
+        <TextView
+            android:id="@+id/tv_player_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:maxLines="1"
+            android:ellipsize="end"/>
+
+        <!-- Hora atual (atualizada a cada minuto) -->
+        <TextView
+            android:id="@+id/tv_clock"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textColor="@color/white"
+            android:fontFamily="monospace"
+            android:layout_marginStart="16dp"/>
+
+    </LinearLayout>
+
+    <!-- ── 4. Overlay inferior: EPG + controles VOD ──────────────────── -->
+    <LinearLayout
+        android:id="@+id/overlay_controls"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingStart="40dp"
+        android:paddingEnd="40dp"
+        android:paddingBottom="32dp"
+        android:paddingTop="40dp"
+        android:background="@drawable/gradient_bottom_overlay"
+        android:visibility="invisible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Informação EPG (canal ao vivo) -->
+        <LinearLayout
+            android:id="@+id/container_epg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="16dp"
+            android:visibility="gone">
+
+            <TextView
+                android:id="@+id/tv_epg_now"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textSize="15sp"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:ellipsize="end"/>
+
+            <TextView
+                android:id="@+id/tv_epg_next_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="A seguir: "
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:layout_marginStart="24dp"/>
+
+            <TextView
+                android:id="@+id/tv_epg_next"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:maxLines="1"/>
+        </LinearLayout>
+
+        <!-- Barra de progresso (VOD) -->
+        <SeekBar
+            android:id="@+id/seek_bar"
+            android:layout_width="match_parent"
+            android:layout_height="36dp"
+            android:progressTint="@color/accent_red"
+            android:thumbTint="@color/accent_red"
+            android:progressBackgroundTint="@color/progress_bg"
+            android:visibility="gone"/>
+
+        <!-- Tempo decorrido / duração total (VOD) -->
+        <LinearLayout
+            android:id="@+id/container_time"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:visibility="gone"
+            android:layout_marginTop="4dp">
+
+            <TextView
+                android:id="@+id/tv_position"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="monospace"/>
+
+            <View
+                android:layout_width="0dp"
+                android:layout_height="1dp"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/tv_duration"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00"
+                android:textSize="13sp"
+                android:textColor="@color/text_secondary"
+                android:fontFamily="monospace"/>
+        </LinearLayout>
+
+        <!-- Dica D-pad -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="◀ -10s   ▶ +10s   ● Play/Pause   ✕ Voltar"
+            android:textSize="11sp"
+            android:textColor="@color/text_hint"
+            android:gravity="center"
+            android:layout_marginTop="12dp"/>
+
+    </LinearLayout>
+
+    <!-- ── 5. Overlay de erro ─────────────────────────────────────────── -->
+    <LinearLayout
+        android:id="@+id/overlay_error"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:background="@drawable/bg_error_card"
+        android:padding="40dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+
+        <!-- Ícone de erro -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="⚠"
+            android:textSize="40sp"
+            android:textColor="@color/accent_red"
+            android:gravity="center"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/tv_error_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Erro no stream"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/tv_error_message"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:textColor="@color/text_secondary"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="24dp"/>
+
+        <!-- Botão "Tentar novamente" — focável pelo D-pad -->
+        <Button
+            android:id="@+id/btn_retry"
+            android:layout_width="200dp"
+            android:layout_height="48dp"
+            android:text="TENTAR NOVAMENTE"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:textColor="@color/white"
+            android:letterSpacing="0.05"
+            android:background="@drawable/bg_button_primary"
+            android:focusable="true"/>
+
+    </LinearLayout>
+
+    <!-- ── 6. Indicador de reconexão automática ──────────────────────── -->
+    <TextView
+        android:id="@+id/tv_reconnecting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Reconectando..."
+        android:textSize="14sp"
+        android:textColor="@color/text_secondary"
+        android:background="@drawable/bg_reconnect_pill"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:paddingTop="8dp"
+        android:paddingBottom="8dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/overlay_controls"
+        android:layout_marginBottom="80dp"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

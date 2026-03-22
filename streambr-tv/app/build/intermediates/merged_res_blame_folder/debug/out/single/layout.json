@@ -1,0 +1,30 @@
+[
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/activity_login.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/activity_login.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/activity_home.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/activity_home.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/card_channel.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/card_channel.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/activity_player.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/activity_player.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/card_vod.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/card_vod.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/activity_splash.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/activity_splash.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-mergeDebugResources-49:/layout/activity_pin.xml",
+        "source": "com.streambr.tv.app-main-52:/layout/activity_pin.xml"
+    }
+]

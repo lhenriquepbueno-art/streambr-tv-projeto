@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Placeholder para pôster de VOD sem imagem -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="160dp"
+    android:height="240dp"
+    android:viewportWidth="160"
+    android:viewportHeight="240">
+    <path android:fillColor="#1A2233"
+        android:pathData="M0,0 L160,0 L160,240 L0,240 Z"/>
+    <!-- Claquete estilizada -->
+    <path android:fillColor="#2A3548"
+        android:pathData="M40,80 L120,80 A6,6 0 0,1 126,86 L126,160 A6,6 0 0,1 120,166 L40,166 A6,6 0 0,1 34,160 L34,86 A6,6 0 0,1 40,80 Z"/>
+    <path android:fillColor="#1A2233"
+        android:pathData="M34,86 L126,86 L126,100 L34,100 Z"/>
+    <!-- Linhas diagonais da claquete -->
+    <path android:fillColor="#E5162A" android:pathData="M46,80 L54,80 L44,100 L36,100 Z"/>
+    <path android:fillColor="#3D4D66" android:pathData="M60,80 L68,80 L58,100 L50,100 Z"/>
+    <path android:fillColor="#E5162A" android:pathData="M74,80 L82,80 L72,100 L64,100 Z"/>
+    <path android:fillColor="#3D4D66" android:pathData="M88,80 L96,80 L86,100 L78,100 Z"/>
+    <path android:fillColor="#E5162A" android:pathData="M102,80 L110,80 L100,100 L92,100 Z"/>
+    <!-- Play icon -->
+    <path android:fillColor="#E5162A" android:pathData="M72,118 L72,148 L96,133 Z"/>
+    <!-- Título placeholder -->
+    <path android:fillColor="#2A3548" android:pathData="M30,180 L130,180 A4,4 0 0,1 134,184 L134,192 A4,4 0 0,1 130,196 L30,196 A4,4 0 0,1 26,192 L26,184 A4,4 0 0,1 30,180 Z"/>
+    <path android:fillColor="#2A3548" android:pathData="M30,202 L100,202 A4,4 0 0,1 104,206 L104,214 A4,4 0 0,1 100,214 L30,214 A4,4 0 0,1 26,210 L26,206 A4,4 0 0,1 30,202 Z"/>
+</vector>

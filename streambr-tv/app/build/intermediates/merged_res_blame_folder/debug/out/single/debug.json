@@ -1,0 +1,118 @@
+[
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\anim_card_enter.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\anim\\card_enter.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_error_card.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_error_card.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_shape_live_dot.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\shape_live_dot.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_badge_live.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_badge_live.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\xml_network_security_config.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\xml\\network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_shape_pin_dot_filled.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\shape_pin_dot_filled.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_reconnect_pill.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_reconnect_pill.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_activity_home.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\activity_home.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_input_field.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_input_field.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_gradient_top_overlay.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\gradient_top_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\animator_card_focused.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\animator\\card_focused.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_activity_splash.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\activity_splash.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_gradient_poster_bottom.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\gradient_poster_bottom.xml"
+    },
+    {
+        "merged": "com.streambr.tv.app-merged_res-50:/xml_network_security_config.xml.flat",
+        "source": "com.streambr.tv.app-main-52:/xml/network_security_config.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_ic_launcher.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\ic_launcher.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_ic_vod_placeholder.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\ic_vod_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_card_vod.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\card_vod.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_activity_login.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\activity_login.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_ic_channel_placeholder.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\ic_channel_placeholder.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_gradient_bottom_overlay.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\gradient_bottom_overlay.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_card_channel.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\card_channel.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_activity_pin.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\activity_pin.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\layout_activity_player.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\layout\\activity_player.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_button_primary.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_button_primary.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_pin_button_secondary.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_pin_button_secondary.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_card_focusable.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_card_focusable.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_shape_pin_dot_empty.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\shape_pin_dot_empty.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_pin_button.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_pin_button.xml"
+    },
+    {
+        "merged": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-merged_res-50:\\drawable_bg_badge_quality.xml.flat",
+        "source": "C:\\Users\\luizb\\.gradle\\daemon\\8.4\\com.streambr.tv.app-main-52:\\drawable\\bg_badge_quality.xml"
+    }
+]

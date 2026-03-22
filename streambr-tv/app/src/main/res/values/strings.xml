@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">StreamBR</string>
+
+    <!-- Login -->
+    <string name="label_server_url">URL do servidor</string>
+    <string name="hint_server_url">http://192.168.1.100:3000</string>
+    <string name="label_username">Usuário</string>
+    <string name="label_password">Senha</string>
+    <string name="btn_login">Entrar</string>
+    <string name="error_empty_fields">Preencha todos os campos</string>
+    <string name="error_invalid_credentials">Usuário ou senha incorretos</string>
+    <string name="error_server_unreachable">Não foi possível conectar ao servidor</string>
+
+    <!-- Home / categorias -->
+    <string name="category_live">Ao Vivo</string>
+    <string name="category_vod">Filmes e Séries</string>
+    <string name="category_sports">Esportes</string>
+    <string name="category_kids">Infantil</string>
+    <string name="category_adult">Adulto +18</string>
+
+    <!-- Player -->
+    <string name="live_badge">AO VIVO</string>
+    <string name="player_error_title">Erro no stream</string>
+    <string name="player_reconnecting">Reconectando…</string>
+    <string name="btn_retry">Tentar novamente</string>
+    <string name="dpad_hint">◀ -10s   ▶ +10s   ● Play/Pause   ✕ Voltar</string>
+    <string name="epg_next_label">A seguir: </string>
+
+    <!-- PIN -->
+    <string name="pin_title">Conteúdo +18</string>
+    <string name="pin_subtitle">Digite seu PIN de 4 dígitos</string>
+    <string name="pin_error">PIN incorreto. Tente novamente.</string>
+    <string name="btn_confirm">Confirmar</string>
+
+    <!-- Geral -->
+    <string name="loading">Carregando…</string>
+    <string name="no_channels">Nenhum canal disponível</string>
+    <string name="version">v1.0</string>
+</resources>

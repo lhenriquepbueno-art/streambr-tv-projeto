@@ -1,0 +1,169 @@
+#EXTM3U
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/qrcode.png" group-title="Variedades", htforum.net
+https://lib.bz/video/site.mp4
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/tvonline.png" group-title="Variedades", www.tvonline.global
+https://lib.bz/video/site_gerou.mp4
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/sbt.png" group-title="Variedades",SBT Interior SP
+https://cdn.jmvstream.com/w/LVW-10801/LVW10801_Xvg4R0u57n/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/sbt.png" group-title="Variedades", SBT - TV Cidade Verde - (PI)
+https://stmv1.transmissaodigital.com/cidadeverdenovo/cidadeverdenovo/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/sbt.png" group-title="Variedades",SBT - TV Difusora (MA)
+https://stream.amsolution.net.br:8443/live/60ce4ae4b9d4c/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/sbt.png" group-title="Variedades",SBT Rede Massa (PR)
+https://cdn-cdn-iguacu.ciclano.io:1443/cdn-iguacu/cdn-iguacu/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/thathi.png" group-title="Variedades", SBT TV Thathi (SP)
+https://cdn-grupo-10049.ciclano.io:1443/grupo-10049/grupo-10049/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/tvguajara.png" group-title="Variedades", SBT TV Guajará (PA)
+https://video05.logicahost.com.br/tvguajara/tvguajara/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/tvaratu.png" group-title="Variedades", SBT TV Aratu (BA)
+https://cdn.jmvstream.com/w/LVW-8379/LVW8379_rIq6ZYiIiA/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/sbtrio.png" group-title="Variedades",SBT Rio (Youtube)
+https://ythls-v3.onrender.com/channel/UCsRfBAspa72ExrsN347W2xg.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/sbtrs.png" group-title="Variedades",SBT RS (Youtube)
+https://ythls-v3.onrender.com/channel/UCHDfPYXReWt5EVIzBA6TzOQ.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recordtv.png" group-title="Variedades", RecordTV MT
+https://cdn.live.br1.jmvstream.com/w/LVW-10841/LVW10841_mT77z9o2cP/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recordtv.png" group-title="Variedades", RecordTV MT 2
+https://cdn.live.br1.jmvstream.com/w/LVW-10842/LVW10842_513N26MDBL/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recordtv.png" group-title="Variedades", RecordTV MT 3
+https://5a2b083e9f360.streamlock.net/tvmt/tvmt.sdp/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recordtv.png" group-title="Variedades", RecordTV RN
+https://video03.logicahost.com.br/portaldatropical/portaldatropical/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recordtv.png" group-title="Variedades", RecordTV NDTV SC
+https://caikron.com.br:19360/criciuma/criciuma.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/recnews.png" group-title="Jornalismo",Record News
+https://stream.ads.ottera.tv/playlist.m3u8?network_id=5431
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/06/Jpnewstv2022.webp" group-title="Jornalismo",Jovem Pan News (Parabólica)
+http://d9tard1jbwri9.cloudfront.net/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/band.png" group-title="Variedades",Band Pará - RBA TV
+https://5cf4a2c2512a2.streamlock.net:443/rbatv/rbatv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/band.png" group-title="Variedades",Band Goiânia - TV Sucesso HD
+https://live-stream.gsnoticias.net.br/live/live-goiania.flv
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/band.png" group-title="Variedades",Band TV - Vale do Uruará
+https://stmv1.paineltv.net/valeradiowebtv/valeradiowebtv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/band.png" group-title="Variedades",Band Minas
+http://evpp.mm.uol.com.br:1935/bandpracas/debatemg/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/arapuam.png" group-title="Variedades", Band - TV Arapuan HD (PB)
+https://5b7f3c45ab7c2.streamlock.net/arapuan/ngrp:arapuan_all/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/12/redetv-pr.webp" group-title="Variedades", RedeTV! TV PR
+https://tv02.zas.media:1936/redetvparana/redetvparana/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/pampa.png" group-title="Variedades", TV Pampa - RedeTV! RS
+https://59f1cbe63db89.streamlock.net:1443/tvpampa/_definst_/tvpampa/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/redetvtocantins.png" group-title="Variedades", RedeTV! Tocantins
+https://59f1cbe63db89.streamlock.net:1443/redetvro/_definst_/redetvro/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/tvpantanalredetv.png" group-title="Variedades", RedeTV! TV Pantanal (MT)
+https://5a2b083e9f360.streamlock.net/tvpantanal/tvpantanal.sdp/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/kpoptvplay.png" group-title="Música",Kpop TV Play
+https://giatv.bozztv.com/giatv/giatv-kpoptvplay/kpoptvplay/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/thekpop.jpg" group-title="Música",The K-pop (Youtube)
+https://ythls-v3.onrender.com/channel/UCoRXPcv8XK5fAplLbk9PTww.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/08/playtv.png" group-title="Variedades",PlayTV
+https://isaocorp.cloudecast.com/playtv/mono.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/08/geekdot.png" group-title="WebTV", Geekdot
+https://stream.ichibantv.com:3764/hybrid/play.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2024/07/animax_lgo.png" group-title="WebTV", Animax
+https://stream.ichibantv.com:3547/hybrid/play.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2024/05/multicanais.webp" group-title="WebTV", Multi Canais
+https://stmv4.voxtvhd.com.br/multicanais/multicanais/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/08/pooptv.png" group-title="WebTV", Poop TV
+https://stream.ichibantv.com:3522/hybrid/play.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/09/start-1.png" group-title="WebTV", Start - WebTV
+https://stmv1.srvif.com/canalstart/canalstart/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/02/xtremenovo.png" group-title="WebTV", XTreme
+https://stmv1.srvif.com/xtremetv/xtremetv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/animetv.png" group-title="WebTV", Anime TV - WebTV
+https://stmv1.srvif.com/animetv/animetv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/loadingamarelo.png" group-title="WebTV",Loading - Web TV
+https://stmv1.srvif.com/loadingtv/loadingtv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2024/05/fox-kids.webp" group-title="WebTV", Fox Kids (WebTV)
+https://stmv1.srvif.com/emlsilva/emlsilva/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/05/kids.png" group-title="WebTV", Kids Mais
+https://video03.logicahost.com.br/novafamilia01/novafamilia01/playlist.m3u8
+
+#EXTINF: -1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/jetsons.png" group-title="WebTV", Jetsons - Webtv
+https://stmv1.srvif.com/jetsontv/jetsontv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/clone.jpg" group-title="WebTV", Rede Clone - WebTV
+https://stmv1.paineltv.net/redeclonetv/redeclonetv/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/odiatv.png" group-title="WebTV", O DIA TV (Youtube)
+https://ythls-v3.onrender.com/channel/UCKnMcgDLxDeq9HqUgLhtYbQ.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/canaluol1.png" group-title="WebTV", Canal Uol
+https://d19fe0yjxkxylf.cloudfront.net/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/200px-logotipo_da_tv_brasil.png" group-title="Pública", TV Brasil  Web
+https://tvbrasil-stream.ebc.com.br/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/canalgov.png" group-title="Pública", Canal Gov
+https://canalgov-stream.ebc.com.br/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/03/canaleducacao.jpeg" group-title="Pública", Canal Educação
+https://canaleducacao-stream.ebc.com.br/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/07/canallibras-1.png" group-title="Pública", Canal Libras
+https://canallibras-stream.ebc.com.br/index.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/gazeta.png" group-title="Variedades", TV Gazeta SP - Araçatuba
+https://video02.logicahost.com.br/tvc21/tvc21/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/rbtv-logo-rede-brasil.png" group-title="Variedades", Rede Brasil (SP)
+https://video01.logicahost.com.br/redebrasil02/redebrasil02/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/brasiloeste.png" group-title="Variedades", Brasil Oeste (MT)
+https://5ad482a77183d.streamlock.net/operacaotbomt.com/operacaotbomt.com/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/1180px-cultura_logo_2013.svg_.png" group-title="Pública",TV Cultura - TV Guará (MA)
+https://video02.logicahost.com.br/tvguara23/tvguara23/playlist.m3u
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/1180px-cultura_logo_2013.svg_.png" group-title="Pública", TV Cultura - TV Futuro (RJ)
+https://tv02.zas.media:1936/tvfuturo/tvfuturo/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/wp-content/uploads/2023/03/tbc.png" group-title="Pública",TV Brasil Central - Cultura (GO)
+https://tbc.zoeweb.tv/tbc/tbc/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/culturapara.png" group-title="Pública", Cultura Pará
+https://www.portalcultura.com.br/playerhtml/funtelpa/tv_funtelpa/playlist.m3u8
+
+#EXTINF:-1 tvg-logo="https://listaiptvbrasil.com/logos/imagens/catve.png" group-title="Pública",Catve - Cultura (PR)
+https://5b33b873179a2.streamlock.net:1443/live/livestream/playlist.m3u8

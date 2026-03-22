@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="accent_red">#FFE5162A</color>
+    <color name="accent_red_alpha">#33E5162A</color>
+    <color name="accent_red_dark">#FFCC0D22</color>
+    <color name="background_dark">#FF080C14</color>
+    <color name="background_surface">#FF0E1520</color>
+    <color name="background_surface2">#FF151E2E</color>
+    <color name="card_background">#FF111827</color>
+    <color name="card_image_bg">#FF1A2233</color>
+    <color name="error_red">#FFFF4444</color>
+    <color name="focus_border">#FFE5162A</color>
+    <color name="gold">#FFF0C040</color>
+    <color name="live_green">#FF22D95A</color>
+    <color name="progress_bg">#3DFFFFFF</color>
+    <color name="scrim_dark">#CC000000</color>
+    <color name="text_hint">#FF3D4D66</color>
+    <color name="text_primary">#FFEEF2F8</color>
+    <color name="text_secondary">#FF6B7A96</color>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFEEF2F8</color>
+    <string name="app_name">StreamBR</string>
+    <string name="btn_confirm">Confirmar</string>
+    <string name="btn_login">Entrar</string>
+    <string name="btn_retry">Tentar novamente</string>
+    <string name="category_adult">Adulto +18</string>
+    <string name="category_kids">Infantil</string>
+    <string name="category_live">Ao Vivo</string>
+    <string name="category_sports">Esportes</string>
+    <string name="category_vod">Filmes e Séries</string>
+    <string name="dpad_hint">◀ -10s   ▶ +10s   ● Play/Pause   ✕ Voltar</string>
+    <string name="epg_next_label">A seguir: </string>
+    <string name="error_empty_fields">Preencha todos os campos</string>
+    <string name="error_invalid_credentials">Usuário ou senha incorretos</string>
+    <string name="error_server_unreachable">Não foi possível conectar ao servidor</string>
+    <string name="hint_server_url">http://192.168.1.100:3000</string>
+    <string name="label_password">Senha</string>
+    <string name="label_server_url">URL do servidor</string>
+    <string name="label_username">Usuário</string>
+    <string name="live_badge">AO VIVO</string>
+    <string name="loading">Carregando…</string>
+    <string name="no_channels">Nenhum canal disponível</string>
+    <string name="pin_error">PIN incorreto. Tente novamente.</string>
+    <string name="pin_subtitle">Digite seu PIN de 4 dígitos</string>
+    <string name="pin_title">Conteúdo +18</string>
+    <string name="player_error_title">Erro no stream</string>
+    <string name="player_reconnecting">Reconectando…</string>
+    <string name="version">v1.0</string>
+    <style name="InputField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="PinButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_pin_button</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:focusable">true</item>
+    </style>
+    <style name="PinButtonSecondary" parent="PinButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:background">@drawable/bg_pin_button_secondary</item>
+    </style>
+    <style name="Theme.StreamBR" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:colorPrimary">@color/accent_red</item>
+        <item name="android:colorAccent">@color/accent_red</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+    <style name="Theme.StreamBR.Login" parent="Theme.StreamBR">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+    <style name="Theme.StreamBR.Player" parent="Theme.StreamBR">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+</resources>

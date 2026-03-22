@@ -1,0 +1,251 @@
+1<?xml version="1.0" encoding="utf-8"?>
+2<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+3    package="com.streambr.tv.debug"
+4    android:versionCode="1"
+5    android:versionName="1.0.0" >
+6
+7    <uses-sdk
+8        android:minSdkVersion="21"
+9        android:targetSdkVersion="34" />
+10
+11    <!-- Permissões necessárias -->
+12    <uses-permission android:name="android.permission.INTERNET" />
+12-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:5:5-67
+12-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:5:22-64
+13    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+13-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:6:5-79
+13-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:6:22-76
+14    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+14-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:7:5-81
+14-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:7:22-78
+15
+16    <!--
+17        CRÍTICO para Android TV / Fire TV:
+18        Declara que o app é para TV (sem touchscreen).
+19        Sem isso, o app não aparece na loja do Fire TV nem na launcher de TV.
+20    -->
+21    <uses-feature
+21-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:14:5-16:36
+22        android:name="android.hardware.touchscreen"
+22-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:15:9-52
+23        android:required="false" />
+23-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:16:9-33
+24    <uses-feature
+24-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:17:5-19:36
+25        android:name="android.software.leanback"
+25-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:18:9-49
+26        android:required="false" />
+26-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:19:9-33
+27
+28    <!-- Fire TV: indica suporte ao controle remoto Amazon -->
+29    <uses-feature
+29-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:22:5-24:36
+30        android:name="amazon.hardware.fire_tv"
+30-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:23:9-47
+31        android:required="false" />
+31-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:24:9-33
+32
+33    <permission
+33-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:22:5-24:47
+34        android:name="com.streambr.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+34-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:23:9-81
+35        android:protectionLevel="signature" />
+35-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:24:9-44
+36
+37    <uses-permission android:name="com.streambr.tv.debug.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+37-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:26:5-97
+37-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:26:22-94
+38
+39    <application
+39-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:26:5-83:19
+40        android:allowBackup="false"
+40-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:27:9-36
+41        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+41-->[androidx.core:core:1.12.0] C:\Users\luizb\.gradle\caches\transforms-3\db3f6b8020888a7f113f2982cc217484\transformed\core-1.12.0\AndroidManifest.xml:28:18-86
+42        android:debuggable="true"
+43        android:extractNativeLibs="true"
+44        android:icon="@drawable/ic_launcher"
+44-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:28:9-45
+45        android:label="StreamBR"
+45-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:29:9-33
+46        android:networkSecurityConfig="@xml/network_security_config"
+46-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:33:9-69
+47        android:roundIcon="@drawable/ic_launcher"
+47-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:30:9-50
+48        android:supportsRtl="true"
+48-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:31:9-35
+49        android:testOnly="true"
+50        android:theme="@style/Theme.StreamBR" >
+50-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:32:9-46
+51
+52        <!-- ── SplashActivity ─────────────────────────────────────────── -->
+53        <activity
+53-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:36:9-48:20
+54            android:name="com.streambr.tv.ui.SplashActivity"
+54-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:37:13-46
+55            android:exported="true"
+55-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:38:13-36
+56            android:noHistory="true"
+56-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:40:13-37
+57            android:screenOrientation="landscape" >
+57-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:39:13-50
+58            <intent-filter>
+58-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:41:13-47:29
+59                <action android:name="android.intent.action.MAIN" />
+59-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:42:17-69
+59-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:42:25-66
+60                <!-- LEANBACK_LAUNCHER: aparece na launcher do Android TV -->
+61                <category android:name="android.intent.category.LEANBACK_LAUNCHER" />
+61-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:44:17-86
+61-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:44:27-83
+62                <!-- LAUNCHER: aparece no Firestick sideload -->
+63                <category android:name="android.intent.category.LAUNCHER" />
+63-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:46:17-77
+63-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:46:27-74
+64            </intent-filter>
+65        </activity>
+66        <activity
+66-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:50:9-54:55
+67            android:name="com.streambr.tv.ui.login.LoginActivity"
+67-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:51:13-51
+68            android:exported="false"
+68-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:52:13-37
+69            android:screenOrientation="landscape"
+69-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:53:13-50
+70            android:windowSoftInputMode="adjustPan" />
+70-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:54:13-52
+71
+72        <!-- ── HomeActivity (tela principal com BrowseFragment) ───────── -->
+73        <activity
+73-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:57:9-61:46
+74            android:name="com.streambr.tv.ui.home.HomeActivity"
+74-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:58:13-49
+75            android:exported="false"
+75-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:59:13-37
+76            android:launchMode="singleTop"
+76-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:61:13-43
+77            android:screenOrientation="landscape" />
+77-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:60:13-50
+78
+79        <!-- ── PlayerActivity ─────────────────────────────────────────── -->
+80        <!--
+81            configChanges: player não reinicia ao girar tela ou mudar config.
+82            turnScreenOn + showWhenLocked: toca vídeo com tela "bloqueada" (TV).
+83        -->
+84        <activity
+84-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:68:9-75:60
+85            android:name="com.streambr.tv.ui.player.PlayerActivity"
+85-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:69:13-53
+86            android:configChanges="keyboard|keyboardHidden|orientation|screenSize|screenLayout|smallestScreenSize|uiMode"
+86-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:72:13-122
+87            android:exported="false"
+87-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:70:13-37
+88            android:screenOrientation="landscape"
+88-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:71:13-50
+89            android:showWhenLocked="true"
+89-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:74:13-42
+90            android:theme="@style/Theme.StreamBR.Player"
+90-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:75:13-57
+91            android:turnScreenOn="true" />
+91-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:73:13-40
+92
+93        <!-- ── PinActivity (área adulta) ─────────────────────────────── -->
+94        <activity
+94-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:78:9-81:53
+95            android:name="com.streambr.tv.ui.PinActivity"
+95-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:79:13-43
+96            android:exported="false"
+96-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:80:13-37
+97            android:screenOrientation="landscape" />
+97-->C:\Users\luizb\streambr-tv\streambr-tv-projeto\streambr-tv\app\src\main\AndroidManifest.xml:81:13-50
+98
+99        <service
+99-->[androidx.room:room-runtime:2.6.1] C:\Users\luizb\.gradle\caches\transforms-3\14d13a8a143358ed406566e479e85cc4\transformed\room-runtime-2.6.1\AndroidManifest.xml:24:9-28:63
+100            android:name="androidx.room.MultiInstanceInvalidationService"
+100-->[androidx.room:room-runtime:2.6.1] C:\Users\luizb\.gradle\caches\transforms-3\14d13a8a143358ed406566e479e85cc4\transformed\room-runtime-2.6.1\AndroidManifest.xml:25:13-74
+101            android:directBootAware="true"
+101-->[androidx.room:room-runtime:2.6.1] C:\Users\luizb\.gradle\caches\transforms-3\14d13a8a143358ed406566e479e85cc4\transformed\room-runtime-2.6.1\AndroidManifest.xml:26:13-43
+102            android:exported="false" />
+102-->[androidx.room:room-runtime:2.6.1] C:\Users\luizb\.gradle\caches\transforms-3\14d13a8a143358ed406566e479e85cc4\transformed\room-runtime-2.6.1\AndroidManifest.xml:27:13-37
+103
+104        <provider
+104-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:24:9-32:20
+105            android:name="androidx.startup.InitializationProvider"
+105-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:25:13-67
+106            android:authorities="com.streambr.tv.debug.androidx-startup"
+106-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:26:13-68
+107            android:exported="false" >
+107-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:27:13-37
+108            <meta-data
+108-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:29:13-31:52
+109                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+109-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:30:17-75
+110                android:value="androidx.startup" />
+110-->[androidx.emoji2:emoji2:1.2.0] C:\Users\luizb\.gradle\caches\transforms-3\2ae845919254fd1c61ba530851d4711d\transformed\emoji2-1.2.0\AndroidManifest.xml:31:17-49
+111            <meta-data
+111-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luizb\.gradle\caches\transforms-3\c9ce0b67a1cd31c1dda71517af8d7473\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:29:13-31:52
+112                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+112-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luizb\.gradle\caches\transforms-3\c9ce0b67a1cd31c1dda71517af8d7473\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:30:17-78
+113                android:value="androidx.startup" />
+113-->[androidx.lifecycle:lifecycle-process:2.7.0] C:\Users\luizb\.gradle\caches\transforms-3\c9ce0b67a1cd31c1dda71517af8d7473\transformed\lifecycle-process-2.7.0\AndroidManifest.xml:31:17-49
+114            <meta-data
+114-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:29:13-31:52
+115                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+115-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:30:17-85
+116                android:value="androidx.startup" />
+116-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:31:17-49
+117        </provider>
+118
+119        <uses-library
+119-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:25:9-27:40
+120            android:name="androidx.window.extensions"
+120-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:26:13-54
+121            android:required="false" />
+121-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:27:13-37
+122        <uses-library
+122-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:28:9-30:40
+123            android:name="androidx.window.sidecar"
+123-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:29:13-51
+124            android:required="false" />
+124-->[androidx.window:window:1.0.0] C:\Users\luizb\.gradle\caches\transforms-3\20f68a6c67f1aeff3122ed90514d51c7\transformed\window-1.0.0\AndroidManifest.xml:30:13-37
+125
+126        <receiver
+126-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:34:9-52:20
+127            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+127-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:35:13-76
+128            android:directBootAware="false"
+128-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:36:13-44
+129            android:enabled="true"
+129-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:37:13-35
+130            android:exported="true"
+130-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:38:13-36
+131            android:permission="android.permission.DUMP" >
+131-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:39:13-57
+132            <intent-filter>
+132-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:40:13-42:29
+133                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:17-91
+133-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:41:25-88
+134            </intent-filter>
+135            <intent-filter>
+135-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:43:13-45:29
+136                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:17-85
+136-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:44:25-82
+137            </intent-filter>
+138            <intent-filter>
+138-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:46:13-48:29
+139                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:17-88
+139-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:47:25-85
+140            </intent-filter>
+141            <intent-filter>
+141-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:49:13-51:29
+142                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:17-95
+142-->[androidx.profileinstaller:profileinstaller:1.3.0] C:\Users\luizb\.gradle\caches\transforms-3\78a0a8e2ee6a6f58e479b46914766cb1\transformed\profileinstaller-1.3.0\AndroidManifest.xml:50:25-92
+143            </intent-filter>
+144        </receiver>
+145    </application>
+146
+147</manifest>

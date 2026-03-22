@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--
+        Tema base do app — herda do Leanback para garantir
+        que BrowseFragment, SearchFragment etc. funcionem corretamente.
+    -->
+    <style name="Theme.StreamBR" parent="Theme.Leanback">
+        <item name="android:windowBackground">@color/background_dark</item>
+        <item name="android:colorPrimary">@color/accent_red</item>
+        <item name="android:colorAccent">@color/accent_red</item>
+        <item name="android:textColorPrimary">@color/text_primary</item>
+        <item name="android:textColorSecondary">@color/text_secondary</item>
+        <!-- Remove status bar e navigation bar em TV -->
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+    <!-- Tema do Player — completamente imersivo, sem qualquer chrome -->
+    <style name="Theme.StreamBR.Player" parent="Theme.StreamBR">
+        <item name="android:windowBackground">@android:color/black</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowLayoutInDisplayCutoutMode">shortEdges</item>
+    </style>
+
+    <!-- Tema do Login — sem action bar -->
+    <style name="Theme.StreamBR.Login" parent="Theme.StreamBR">
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <!-- ── Estilo dos botões de PIN ─────────────────────────────────── -->
+    <style name="PinButton">
+        <item name="android:layout_width">80dp</item>
+        <item name="android:layout_height">72dp</item>
+        <item name="android:textSize">24sp</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:background">@drawable/bg_pin_button</item>
+        <item name="android:layout_marginStart">6dp</item>
+        <item name="android:layout_marginEnd">6dp</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+    <style name="PinButtonSecondary" parent="PinButton">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_secondary</item>
+        <item name="android:background">@drawable/bg_pin_button_secondary</item>
+    </style>
+
+    <!-- ── Estilo de campos de texto ────────────────────────────────── -->
+    <style name="InputField">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">56dp</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textColorHint">@color/text_hint</item>
+        <item name="android:background">@drawable/bg_input_field</item>
+        <item name="android:paddingStart">16dp</item>
+        <item name="android:paddingEnd">16dp</item>
+        <item name="android:maxLines">1</item>
+        <item name="android:focusable">true</item>
+    </style>
+
+</resources>

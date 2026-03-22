@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+    Card de VOD — pôster vertical para filmes e séries
+
+    Dimensões: 160dp × 240dp (proporção 2:3, padrão de pôster de filme)
+
+    Estrutura visual:
+      ┌───────────────┐
+      │               │  ← Poster (Glide) ocupa 70% da altura
+      │   [IMAGEM]    │
+      │           [4K]│  ← Badge qualidade (canto sup. direito)
+      │               │
+      ├───────────────┤
+      │ Título        │  ← 14sp bold, max 2 linhas
+      │ ★ 8.5 · 2024  │  ← rating + ano, 11sp
+      └───────────────┘
+
+    Gradiente no rodapé da imagem garante legibilidade do título
+    mesmo com pôsteres claros.
+-->
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="160dp"
+    android:layout_height="240dp"
+    app:cardCornerRadius="10dp"
+    app:cardBackgroundColor="@color/card_background"
+    app:cardElevation="0dp"
+    android:focusable="true"
+    android:focusableInTouchMode="true"
+    android:foreground="@drawable/bg_card_focusable">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Pôster do filme (Glide carrega aqui) -->
+        <ImageView
+            android:id="@+id/iv_poster"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:scaleType="centerCrop"
+            android:contentDescription="Pôster"
+            android:background="@color/card_image_bg"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/container_info"
+            app:layout_constraintHeight_percent="0.70"/>
+
+        <!-- Gradiente sobre o rodapé do pôster (melhora leitura do título) -->
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:background="@drawable/gradient_poster_bottom"
+            app:layout_constraintBottom_toTopOf="@id/container_info"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Badge de qualidade (4K / HD / FHD) — canto superior direito -->
+        <TextView
+            android:id="@+id/badge_quality"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:textSize="9sp"
+            android:textStyle="bold"
+            android:textColor="@color/gold"
+            android:background="@drawable/bg_badge_quality"
+            android:paddingStart="6dp"
+            android:paddingEnd="6dp"
+            android:gravity="center"
+            android:layout_margin="8dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <!-- Área de informações: título + rating -->
+        <LinearLayout
+            android:id="@+id/container_info"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHeight_percent="0.30">
+
+            <!-- Título do filme / série -->
+            <TextView
+                android:id="@+id/tv_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:maxLines="2"
+                android:ellipsize="end"
+                android:lineSpacingMultiplier="1.1"/>
+
+            <!-- Rating e ano -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_marginTop="3dp">
+
+                <!-- Estrela -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="★"
+                    android:textSize="10sp"
+                    android:textColor="@color/gold"/>
+
+                <!-- Nota -->
+                <TextView
+                    android:id="@+id/tv_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/gold"
+                    android:layout_marginStart="2dp"/>
+
+                <!-- Separador -->
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" · "
+                    android:textSize="11sp"
+                    android:textColor="@color/text_hint"/>
+
+                <!-- Ano -->
+                <TextView
+                    android:id="@+id/tv_year"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="11sp"
+                    android:textColor="@color/text_hint"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>
